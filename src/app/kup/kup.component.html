@@ -1,0 +1,19 @@
+<h2>Kúp térfogata</h2>
+
+<form [formGroup]="kupForm" (ngSubmit)="onSubmit()">
+    <div>
+      <div>
+        <input type="text" placeholder="radius" formControlName="radius">
+      </div>
+    
+      <div>
+        <input type="text" placeholder="height" formControlName="height" ()="onChange">
+      </div>
+    </div>
+
+    <button type="submit">Számít</button>
+
+    <div>
+        <input type="text" readonly formControlName="volume">
+      </div>
+</form>
