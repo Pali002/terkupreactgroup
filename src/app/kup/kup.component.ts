@@ -8,18 +8,16 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class KupComponent implements OnInit {
 
-  kupForm = new FormGroup({
-    radius: new FormControl(''),
-    height: new FormControl(''),
-    volume: new FormControl('')
-  });
+  kupForm !: FormGroup;
+
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  onClickCalcButton() {
-    // this.formHandler();
+    this.kupForm = new FormGroup({
+      radius: new FormControl(''),
+      height: new FormControl(''),
+      volume: new FormControl('')
+    });
   }
 
   onSubmit() {
